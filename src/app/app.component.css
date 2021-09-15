@@ -1,0 +1,38 @@
+mat-toolbar{
+    background:white;
+    color:black;
+    position: sticky;
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; 
+}
+.text{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size:5vw;
+    
+}
+
+img{
+    height: 3em;
+    float: right;
+}
+h1{
+    color:black;
+    font-family:'shiningheraldexpand';
+}
+.material-devider {
+    margin-top: 5px;
+    border-top-color: black;
+  }
+ 
+  .leftArea{
+    float: left;
+    width: 30%;
+  
+  }
+.content{
+    
+    margin-top: 2rem !important;
+   
+}

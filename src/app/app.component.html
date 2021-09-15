@@ -1,0 +1,43 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--MY TOPBAR-->
+
+<mat-toolbar >
+  <mat-toolbar-row>
+    <img class="logo" src="./assets/yotubelogo.png" />
+    <span class="text"></span>
+    <img class="logo" src="./assets/logo.png" />
+    <h1>Relief Applications</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-divider class="material-devider"></mat-divider>
+
+<div class="content mt-2" fxLayout="row" fxLayout.xs="column" fxFlexFill >
+
+  <!--My History Component-->
+  	<div fxFlex="30"  class="sec3" fxFlex.xs="100" >
+    <button (click)="displayHistory()" type="button" class="btn btn-primary btn-lg btn3d"><span class="glyphicon glyphicon-repeat"></span> History</button>
+    <button (click)="displayBookmark()"type="button" class="btn btn-primary btn-lg btn3d"><span class="glyphicon glyphicon glyphicon-heart"></span> Bookmarks</button>
+    <app-history *ngIf="display"
+      [changing]="newVideoSubject"
+      (changeVideoEvent)="changeVideo($event)"
+    ></app-history>
+     <div>
+      <app-bookmarks [changing]="newVideoBookmarkSubject"
+      (changeVideoEvent)="changeVideo($event)" *ngIf="!display"></app-bookmarks>
+    </div>
+  </div>
+  <!--My SearchBar Component-->
+  <div fxFlex="70%">
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+      <app-search-bar
+        [changing]="chnageVideoSubject"
+        (newVideoEvent)="addNewVideo($event)"
+        (addVideoBookmarkEvent)="addBookmark($event)"
+      ></app-search-bar>
+      
+    </div>
+   
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div  demoYouTubePlayer *ngIf="video" >
+<youtube-player 
+  videoId={{video.videoURL}}
+  suggestedQuality="highres" 
+ [width]="videoWidth"
+  [height]="videoHeight"
+ >
+</youtube-player>
+ <p>
+          <button type="button" class="btn btn-primary btn-lg btn3d" (click)="savebookmark()"><span class="glyphicon glyphicon-heart"></span></button>
+</p>
+</div>

@@ -1,0 +1,31 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" class="mt-sm-3">  <form
+    class="form-inline md-form  mb-4"
+    [formGroup]="searchForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      class="form-control  "
+      size="60"
+      name="videoURL"
+      ngModel
+      width="30"
+      type="text"
+      placeholder="Enter a video link"
+      aria-label="Search"
+      formControlName="videoURL"
+
+    />
+
+    <button
+      mdbBtn
+      
+     
+      class="btn btn-primary"
+      mdbWavesEffect
+      type="submit"
+    >
+      Play
+    </button>
+  </form>
+  <app-video-view  (addToBookmark)="addBookmark($event)" [video]="video" ></app-video-view>
+</div>
